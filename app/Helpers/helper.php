@@ -13,12 +13,44 @@ namespace App\Helpers;
 
 use flight as app;
 
-class helper
+
+class Helper
 {
 
+    public static $var =  ['from','to'];
+
+ public  function __construct()
+{
+
+
+}
+
+public static function run()
+{
+
+
+return new self;
+
+}
+
+
+public  function mail($from,$to)
+    {
+    self::$var['from'] = $from;
+    self::$var['to'] = $to;
+echo "Mail from {$from} mail to {$to}";
+    //return new self;
+
+    }
 
 
 
 
 }
+
+
+
+
+
+
 

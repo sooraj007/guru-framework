@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Helpers\helper;
 use flight as app;
 
 
@@ -28,9 +29,13 @@ Class BaseController
 public static function User()
 {
 
-$re = app::request()->data->name;
+//$re = app::request()->data->name;
 
-echo app::json(["name"=>$re]);
+Helper::run()->mail("sooraj@gmail.com","proflicxx@gmail.com");
+
+//echo app::json(["name"=>$re]);
+
+
 
 }
 
